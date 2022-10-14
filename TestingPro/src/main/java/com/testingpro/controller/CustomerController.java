@@ -2,6 +2,8 @@ package com.testingpro.controller;
 
 
 
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -26,7 +28,7 @@ public class CustomerController {
 	} 
 	
 	@RequestMapping("/processForm")
-	public String processForm(@ModelAttribute("customer") Customer customer, BindingResult result) {
+	public String processForm(@Valid @ModelAttribute("customer") Customer customer, BindingResult result) {
 		System.out.println(customer.getFirstName()+" "+customer.getLastName());
 		if(result.hasErrors()) {
 			

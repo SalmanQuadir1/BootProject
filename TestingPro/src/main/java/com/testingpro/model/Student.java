@@ -2,10 +2,16 @@ package com.testingpro.model;
 
 import java.util.LinkedHashMap;
 
+import javax.validation.constraints.Min;
+
 
 
 public class Student {
+    @Min(value=5,message="five characters allowed")
+
 	private String firstName;
+    @Min(value=5,message="five characters allowed")
+
 	private String lastName;
 	private String country;
 	private LinkedHashMap<String ,  String> countryOptions;

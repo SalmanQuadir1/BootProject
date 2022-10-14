@@ -1,14 +1,16 @@
 package com.testingpro.model;
 
-
-
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 public class Customer {
 	
-
+    @NotNull
+    @Min(value=5,message="five characters allowed")
 	private String firstName;
 	
-	
+	@NotEmpty
 	private String lastName;
 	
 	
